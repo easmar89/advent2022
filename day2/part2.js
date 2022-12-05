@@ -1,18 +1,18 @@
-const fs = require('fs');
+const fs = require("fs");
 
-const file = fs.readFileSync('input.txt', 'utf-8');
-let inputArray = file.split('\n');
+const file = fs.readFileSync("input.txt", "utf-8");
+let inputArray = file.split("\n");
 
 const OPPONENT_MOVES = {
-  A: 'rock',
-  B: 'paper',
-  C: 'scissors',
+  A: "rock",
+  B: "paper",
+  C: "scissors",
 };
 
 const PLAYER_MOVES = {
-  rock: { score: 1, beats: 'scissors' },
-  paper: { score: 2, beats: 'rock' },
-  scissors: { score: 3, beats: 'paper' },
+  rock: { score: 1, beats: "scissors" },
+  paper: { score: 2, beats: "rock" },
+  scissors: { score: 3, beats: "paper" },
 };
 
 let totalScore = 0;
@@ -33,9 +33,9 @@ for (let i = 0; i < inputArray.length; i++) {
 }
 
 function setPlayerMove(input, oppMove) {
-  if (input === 'Y') {
+  if (input === "Y") {
     return OPPONENT_MOVES[oppMove];
-  } else if (input === 'X') {
+  } else if (input === "X") {
     return PLAYER_MOVES[OPPONENT_MOVES[oppMove]].beats;
   } else {
     for (let prop in PLAYER_MOVES) {

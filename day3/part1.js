@@ -1,8 +1,8 @@
-const fs = require('fs');
+const fs = require("fs");
 
-let file = fs.readFileSync('input.txt', 'utf-8');
-let inputArray = file.split('\n');
-const PRIORITIES = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let file = fs.readFileSync("input.txt", "utf-8");
+let inputArray = file.split("\n");
+const PRIORITIES = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let prioritiesSum = 0;
 
 inputArray.forEach((list) => {
