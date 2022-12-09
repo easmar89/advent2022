@@ -1,6 +1,6 @@
-const fs = require('fs');
+const { readFileSync } = require('fs');
 
-const file = fs.readFileSync('input.txt', 'utf-8');
+const file = readFileSync('input.txt', 'utf-8');
 const inputArray = file.replaceAll('-', '\n').replaceAll(',', '\n').split('\n');
 
 let completeOverlaps = 0;

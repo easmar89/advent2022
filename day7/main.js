@@ -1,6 +1,6 @@
-const fs = require('fs');
-const file = fs
-  .readFileSync('input.txt', 'utf-8')
+const { readFileSync } = require('fs');
+
+const file = readFileSync('input.txt', 'utf-8')
   .split('\n')
   .map((line) => line.split(' '));
 const MAX_SIZE = 100000;
@@ -50,8 +50,8 @@ const DISK_SIZE = 70000000;
 const NEEDED_UNUSED_SPACE = 30000000;
 const totalToDelete = usedSpace - (DISK_SIZE - NEEDED_UNUSED_SPACE);
 
-const FolderSiseToDelete = sizes
+const folderSizeToDelete = sizes
   .filter((size) => size >= totalToDelete)
   .sort((a, b) => a - b);
 
-console.log(FolderSiseToDelete[0]);
+console.log(folderSizeToDelete[0]);

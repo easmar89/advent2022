@@ -1,20 +1,20 @@
-const fs = require("fs");
+const { readFileSync } = require('fs');
 
-const file = fs.readFileSync("input.txt", "utf-8");
-const inputArray = file.split("\n");
+const file = readFileSync('input.txt', 'utf-8');
+const inputArray = file.split('\n');
 const DRAW_SCORE = 3;
 const WIN_SCORE = 6;
 
 const OPPONENT_MOVES = {
-  A: "rock",
-  B: "paper",
-  C: "scissors",
+  A: 'rock',
+  B: 'paper',
+  C: 'scissors',
 };
 
 const PLAYER_MOVES = {
-  X: { move: "rock", score: 1, beats: "scissors" },
-  Y: { move: "paper", score: 2, beats: "rock" },
-  Z: { move: "scissors", score: 3, beats: "paper" },
+  X: { move: 'rock', score: 1, beats: 'scissors' },
+  Y: { move: 'paper', score: 2, beats: 'rock' },
+  Z: { move: 'scissors', score: 3, beats: 'paper' },
 };
 
 let totalScore = 0;

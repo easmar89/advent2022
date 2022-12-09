@@ -1,13 +1,13 @@
-const fs = require("fs");
+const { readFileSync } = require('fs');
 
-const file = fs.readFileSync("input.txt", "utf-8");
-let array = file.split("\n");
+const file = readFileSync('input.txt', 'utf-8');
+let array = file.split('\n');
 
 let result = [];
 let sum = 0;
 
 for (let i = 0; i < array.length; i++) {
-  if (array[i] !== "") {
+  if (array[i] !== '') {
     sum += +array[i];
   } else {
     result.push(sum);

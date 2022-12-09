@@ -1,7 +1,6 @@
-const fs = require('fs');
-const dataFile = fs.readFileSync('input.txt', 'utf-8');
-const commandsFile = fs
-  .readFileSync('commands.txt', 'utf-8')
+const { readFileSync } = require('fs');
+const dataFile = readFileSync('input.txt', 'utf-8');
+const commandsFile = readFileSync('commands.txt', 'utf-8')
   .replaceAll(/[a-z]+\s/gi, '')
   .split('\n')
   .map((line) => line.split(' '));
