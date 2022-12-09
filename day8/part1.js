@@ -43,4 +43,4 @@ function checkColumn(row, col) {
   return top || bottom;
 }
 
-console.log('Visible trees: ', visibleTrees);
+console.log(visibleTrees);
